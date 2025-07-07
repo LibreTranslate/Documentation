@@ -1,0 +1,2 @@
+# Docs
+LibreTranslate Documentation
