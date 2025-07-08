@@ -1,36 +1,82 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Documentation
+description: Get started with LibreTranslate, the free and open source translation API.
+template: doc
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard , Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+LibreTranslate is a Free and Open Source Machine Translation API. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations.
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+## Quickstart
+
+### Self-Hosted
+
+If you want to run LibreTranslate for free on your machine:
+
+```bash
+$ pip install libretranslate
+$ libretranslate
+$ curl -X POST http://localhost:5000/translate -d q="Hello" -d source=en -d target=es
+```
+
+```json
+{"translatedText":"Hola"}
+```
+
+See also the [installation](/guides/installation/) page.
+
+### Managed Hosting
+
+If you'd like an easier setup, high availability, fast translations and a professionally managed service for a small monthly cost:
+ * Get an API key from: https://portal.libretranslate.com
+
+```bash
+$ curl -X POST https://libretranslate.com/translate -d q="Hello" -d source=en -d target=es -d api_key=xxxxx
+```
+
+```json
+{"translatedText":"Hola"}
+```
+
+Either way we're happy you're here! ❤
+
+----
+
+## Getting Started
+
+<CardGrid>
+	<LinkCard title="Installation" 
+			   href="/guides/example/"
+			   description="How to quickly get the software up and running on your machine." />
+	<LinkCard title="Basic Usage" 
+			href="/reference/example/"
+			description="Start translating with step by step examples." />
+	<LinkCard title="Community Resources" 
+			href="/reference/example/"
+			description="Questions? Find out where to get help." />
+
+	<LinkCard title="API Reference" 
+			href="/reference/example/"
+			description="Browse the API specification" />
+
+</CardGrid>
+
+## Contributing
+
+<CardGrid>
+
+	<LinkCard title="Localization" 
+			href="/reference/example/"
+			description="Learn how to translate these docs and the software in your language." />
+	
+	<LinkCard title="Training New Language Models" 
+			href="/reference/example/"
+			description="Learn how to train your own translation models." />
+	
+	<LinkCard title="Support the Project" 
+			href="/reference/example/"
+			description="Find out all the ways you can contribute." />
+	
+
 </CardGrid>

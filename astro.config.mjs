@@ -7,6 +7,13 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'LibreTranslate',
+			logo: {
+				src: './src/assets/logo.svg',
+				replacesTitle: true
+			},
+			customCss: [
+				'./src/styles/custom.css',
+			],
 			social: [
 				{ icon: 'discourse', label: 'Community Forum', href: 'https://community.libretranslate.com' },
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/LibreTranslate/' },
