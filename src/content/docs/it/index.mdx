@@ -1,0 +1,68 @@
+---
+title: Documentazione
+description: Inizia a usare LibreTranslate, l'API di traduzione gratuita e open source.
+template: doc
+---
+
+import { LinkCard , Card, CardGrid } from '@astrojs/starlight/components';
+
+LibreTranslate è un'API di Traduzione Automatica Libera e Open Source. A differenza di altre API, non si affida a fornitori proprietari come Google o Azure per eseguire le traduzioni. Il suo motore di traduzione è invece basato sulla libreria open source [Argos Translate](https://github.com/argosopentech/argos-translate).
+
+:::tip[Provalo online!]
+Apri [libretranslate.com](https://libretranslate.com) nel tuo browser.
+:::
+
+![Traduzione](https://github.com/user-attachments/assets/457696b5-dbff-40ab-a18e-7bfb152c5121)
+
+---
+
+## Guida Rapida
+
+### Self-Hosted
+
+Se vuoi eseguire LibreTranslate gratuitamente sulla tua macchina:
+
+```bash
+$ pip install libretranslate
+$ libretranslate
+$ curl -X POST http://localhost:5000/translate -d q="Hello" -d source=en -d target=es
+```
+
+```json
+{"translatedText": "Hola"}
+```
+
+Vedi anche la pagina di installazione.
+
+Hosting Gestito
+Se desideri una configurazione più semplice, alta disponibilità, traduzioni veloci e un servizio gestito professionalmente a un piccolo costo mensile:
+
+ * Ottieni una chiave API da: https://portal.libretranslate.com
+
+```bash
+$ curl -X POST [https://libretranslate.com/translate](https://libretranslate.com/translate) -d q="Hello" -d source=en -d target=es -d api_key=xxxxx
+```
+
+```json
+{"translatedText":"Hola"}
+```
+
+In ogni caso, siamo felici che tu sia qui! ❤
+
+Per Iniziare
+
+<LinkCard title="Riferimento API"
+		href="/reference/example/"
+		description="Sfoglia le specifiche dell'API" />
+Contribuisci
+<LinkCard title="Localizzazione"
+		href="/reference/example/"
+		description="Scopri come tradurre questa documentazione e il software nella tua lingua." />
+
+<LinkCard title="Addestramento di Nuovi Modelli Linguistici"
+		href="/reference/example/"
+		description="Scopri come addestrare i tuoi modelli di traduzione." />
+
+<LinkCard title="Sostieni il Progetto"
+		href="/reference/example/"
+		description="Scopri tutti i modi in cui puoi contribuire." />

@@ -38,12 +38,23 @@ export default defineConfig({
 					items: [
 						{ label: "Forum", link: "https://community.libretranslate.com" },
 						{ label: "GitHub", link: "https://github.com/LibreTranslate/" },
-						{ label: "BlueSky", link: "https://bsky.app/profile/libretranslate.com" },
-						
 					]
 				},
 				...openAPISidebarGroups,
 			],
+
+			defaultLocale: 'root',
+
+			locales: {
+			  // English docs in `src/content/docs/en/`
+			  root: {
+				label: 'English',
+				lang: 'en'
+			  },
+			  it: {
+				label: 'Italiano',
+			  },
+			},
 
 			plugins: [
 				// Generate the OpenAPI documentation pages.
