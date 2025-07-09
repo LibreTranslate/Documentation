@@ -1,8 +1,13 @@
 header{
     background-color: #1565c0;
-    select, svg{
-        color: white;
-    }
+}
+
+header svg{
+    color: white;
+}
+
+header select{
+    color: white;
 }
 
 /* Dark mode colors. */

@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi'
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,16 +23,45 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: "Welcome",
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+						{ label: "Quickstart", link: "/" },
+					]
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Guides',
+					autogenerate: { directory: 'guides' },
 				},
+				{
+					label: "Community",
+					collapsed: true,
+					items: [
+						{ label: "Forum", link: "https://community.libretranslate.com" },
+						{ label: "GitHub", link: "https://github.com/LibreTranslate/" },
+						{ label: "BlueSky", link: "https://bsky.app/profile/libretranslate.com" },
+						
+					]
+				},
+				...openAPISidebarGroups,
+			],
+
+			plugins: [
+				// Generate the OpenAPI documentation pages.
+				starlightOpenAPI([
+					{
+						base: 'api',
+						// schema: 'https://libretranslate.com/spec',
+						schema: 'http://localhost:5000/spec',
+						label: "API Reference",
+						collapsed: true,
+						sidebar: {
+							operations: {
+								badges: true,
+								labels: "operationId"
+							}
+						}
+					},
+				]),
 			],
 		}),
 	],

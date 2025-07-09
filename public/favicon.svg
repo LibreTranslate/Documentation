@@ -1,1 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill-rule="evenodd" d="M81 36 64 0 47 36l-1 2-9-10a6 6 0 0 0-9 9l10 10h-2L0 64l36 17h2L28 91a6 6 0 1 0 9 9l9-10 1 2 17 36 17-36v-2l9 10a6 6 0 1 0 9-9l-9-9 2-1 36-17-36-17-2-1 9-9a6 6 0 1 0-9-9l-9 10v-2Zm-17 2-2 5c-4 8-11 15-19 19l-5 2 5 2c8 4 15 11 19 19l2 5 2-5c4-8 11-15 19-19l5-2-5-2c-8-4-15-11-19-19l-2-5Z" clip-rule="evenodd"/><path d="M118 19a6 6 0 0 0-9-9l-3 3a6 6 0 1 0 9 9l3-3Zm-96 4c-2 2-6 2-9 0l-3-3a6 6 0 1 1 9-9l3 3c3 2 3 6 0 9Zm0 82c-2-2-6-2-9 0l-3 3a6 6 0 1 0 9 9l3-3c3-2 3-6 0-9Zm96 4a6 6 0 0 1-9 9l-3-3a6 6 0 1 1 9-9l3 3Z"/><style>path{fill:#000}@media (prefers-color-scheme:dark){path{fill:#fff}}</style></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.195898"
+     inkscape:cx="14.572626"
+     inkscape:cy="109.067"
+     inkscape:window-width="1920"
+     inkscape:window-height="1049"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <style
+     id="style2">path{fill:#000}@media (prefers-color-scheme:dark){path{fill:#fff}}</style>
+  <g
+     aria-label="众"
+     transform="matrix(9.7406488,0,0,9.7406488,-220.74502,-834.58735)"
+     id="text833"
+     style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect835);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.67642">
+    <path
+       d="m 34.996103,90.121035 -0.614947,0.759641 q -2.754346,-1.41593 -3.948067,-2.950715 -1.167884,1.617467 -3.7672,2.888703 L 26.0096,90.084861 q 3.457142,-1.601964 4.283963,-3.849882 l 0.878496,0.273884 q -0.175699,0.516763 -0.232543,0.604613 1.116207,1.596797 4.056587,3.007559 z m 0.165364,4.91958 -0.676959,0.645954 q -1.514115,-1.157549 -2.346102,-2.826692 -0.547769,1.550288 -2.268589,2.806021 l -0.676959,-0.625283 q 1.19889,-0.795814 1.798334,-1.875848 0.599445,-1.080034 0.682127,-3.079906 l 0.909502,0.07751 q 0,0.268716 -0.04134,0.671791 l -0.03617,0.361734 q 0,0.273884 0.30489,1.033525 0.310058,0.754474 0.899167,1.467606 0.594277,0.707965 1.452103,1.343583 z m -4.800725,-1.374588 -0.702797,0.63045 q -0.594277,-0.780312 -1.162716,-1.276404 -0.651121,1.421098 -2.020542,2.676831 l -0.687295,-0.614948 q 1.229895,-1.095537 1.767329,-2.201409 0.5426,-1.105872 0.697629,-2.795686 l 0.919838,0.09819 q -0.103353,0.940508 -0.366902,1.91719 1.00252,0.862993 1.555456,1.565791 z"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Adobe Garamond Pro';-inkscape-font-specification:'Adobe Garamond Pro Bold';fill:#000000;stroke-width:1.67642"
+       id="path961" />
+  </g>
+  <path
+     d="m 54.49861,118.02677 v -8.0227 H 19.27704 V 46.703085 h -9.098905 v 71.323685 z"
+     style="font-style:normal;font-weight:normal;font-size:43.3964px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.1005"
+     id="path964" />
+</svg>
