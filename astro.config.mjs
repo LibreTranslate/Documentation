@@ -59,9 +59,9 @@ export default defineConfig({
 				label: 'English',
 				lang: 'en'
 			  },
-			  it: {
-				label: 'Italiano',
-			  },
+			//   it: {
+			// 	label: 'Italiano',
+			//   },
 			},
 
 			editLink: {
