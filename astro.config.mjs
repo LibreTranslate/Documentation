@@ -73,8 +73,8 @@ export default defineConfig({
 				starlightOpenAPI([
 					{
 						base: 'api',
-						// schema: 'https://libretranslate.com/spec',
-						schema: 'http://localhost:5000/spec',
+						schema: 'https://libretranslate.com/spec',
+						// schema: 'http://localhost:5000/spec',
 						label: "API Reference",
 						collapsed: true,
 						sidebar: {
