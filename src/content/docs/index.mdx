@@ -8,7 +8,6 @@ import { LinkCard , Card, CardGrid } from '@astrojs/starlight/components';
 
 LibreTranslate is a Free and Open Source Machine Translation API. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source [Argos Translate](https://github.com/argosopentech/argos-translate) library.
 
-
 :::tip[Try it online!]
 Open [libretranslate.com](https://libretranslate.com) in your browser.
 :::
@@ -55,17 +54,17 @@ Either way we're happy you're here! ❤
 
 <CardGrid>
 	<LinkCard title="Installation" 
-			   href="/guides/example/"
+			   href="/guides/installation/"
 			   description="How to quickly get the software up and running on your machine." />
 	<LinkCard title="Basic Usage" 
-			href="/reference/example/"
+			href="/guides/api_usage/"
 			description="Start translating with step by step examples." />
 	<LinkCard title="Community Resources" 
-			href="/reference/example/"
+			href="/community/resources/"
 			description="Questions? Find out where to get help." />
 
 	<LinkCard title="API Reference" 
-			href="/reference/example/"
+			href="/api/"
 			description="Browse the API specification" />
 
 </CardGrid>
@@ -75,16 +74,28 @@ Either way we're happy you're here! ❤
 <CardGrid>
 
 	<LinkCard title="Localization" 
-			href="/reference/example/"
+			href="/guides/contributing/#documentation"
 			description="Learn how to translate these docs and the software in your language." />
 	
-	<LinkCard title="Training New Language Models" 
-			href="/reference/example/"
-			description="Learn how to train your own translation models." />
-	
 	<LinkCard title="Support the Project" 
-			href="/reference/example/"
+			href="/guides/contributing/"
 			description="Find out all the ways you can contribute." />
-	
+
+	<LinkCard title="Training New Language Models" 
+			href="https://github.com/LibreTranslate/Locomotive"
+			description="Learn how to train your own translation models." />
 
 </CardGrid>
+
+
+## Credits
+
+This work is largely possible thanks to [Argos Translate](https://github.com/argosopentech/argos-translate), which powers the translation engine.
+
+## License
+
+[GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.en.html)
+
+## Trademark
+
+See [Trademark Guidelines](https://github.com/LibreTranslate/LibreTranslate/blob/main/TRADEMARK.md)

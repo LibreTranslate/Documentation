@@ -30,14 +30,22 @@ export default defineConfig({
 				},
 				{
 					label: 'Guides',
-					autogenerate: { directory: 'guides' },
+					items: [
+						{ slug: 'guides/installation' },
+						{ slug: 'guides/api_usage' },
+						{ slug: 'guides/manage_api_keys' },
+						{ slug: 'guides/build_from_sources' },
+						{ slug: 'guides/integrations' },
+						{ slug: 'guides/contributing' },
+					]
 				},
 				{
 					label: "Community",
-					collapsed: true,
+					collapsed: false,
 					items: [
-						{ label: "Forum", link: "https://community.libretranslate.com" },
-						{ label: "GitHub", link: "https://github.com/LibreTranslate/" },
+						{ slug: 'community/resources' },
+						{ slug: 'community/mirrors' },
+						{ slug: 'community/projects' },
 					]
 				},
 				...openAPISidebarGroups,
@@ -54,6 +62,10 @@ export default defineConfig({
 			  it: {
 				label: 'Italiano',
 			  },
+			},
+
+			editLink: {
+				baseUrl: 'https://github.com/LibreTranslate/Documentation/edit/main/',
 			},
 
 			plugins: [
