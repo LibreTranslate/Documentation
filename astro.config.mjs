@@ -41,7 +41,7 @@ export default defineConfig({
 				},
 				{
 					label: "Community",
-					collapsed: false,
+					collapsed: true,
 					items: [
 						{ slug: 'community/resources' },
 						{ slug: 'community/mirrors' },

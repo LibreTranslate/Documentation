@@ -3,7 +3,7 @@ title: Mirrors
 description: List of available mirrors for LibreTranslate.
 ---
 
-This is a list of public LibreTranslate instances. Some require an API key. If you want to add a new URL, please open a pull request.
+This is a list of public LibreTranslate instances. Some require an API key. If you want to add a new URL, please open a [pull request](https://github.com/LibreTranslate/Documentation/edit/main/src/content/docs/community/mirrors.md).
 
 | URL                                                                 | API Key Required | Links                                                                                                         |
 | ------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------- |
