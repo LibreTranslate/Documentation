@@ -20,3 +20,9 @@ https://github.com/LibreTranslate/LibreTranslate
 We have a low-volume BlueSky account that we use for broadcasting the latest news from the project.
 
 https://bsky.app/profile/libretranslate.com
+
+## Weblate
+
+You can help translate the UI of LibreTranslate via Weblate.
+
+https://hosted.weblate.org/projects/libretranslate/app/

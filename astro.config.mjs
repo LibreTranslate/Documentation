@@ -37,6 +37,7 @@ export default defineConfig({
 						{ slug: 'guides/build_from_sources' },
 						{ slug: 'guides/integrations' },
 						{ slug: 'guides/contributing' },
+						{ slug: 'guides/faq' },						
 					]
 				},
 				{

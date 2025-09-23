@@ -89,7 +89,6 @@ helm install libretranslate libretranslate/libretranslate --namespace libretrans
 | `--req-limit-storage`           | Storage URI to use for request limit data storage. See [Flask Limiter](https://flask-limiter.readthedocs.io/en/stable/configuration.html)          | `memory://`             |
 | `--req-time-cost`               | Considers a time cost (in seconds) for request limiting purposes. If a request takes 10 seconds and this value is set to 5, the request cost is 2. | `No cost`               |
 | `--batch-limit`                 | Set maximum number of texts to translate in a batch request                                                                                        | `No limit`              |
-| `--ga-id`                       | Enable Google Analytics on the API client page by providing an ID                                                                                  | `Disabled`              |
 | `--frontend-language-source`    | Set frontend default language - source                                                                                                             | `auto`                  |
 | `--frontend-language-target`    | Set frontend default language - target                                                                                                             | `locale`                |
 | `--frontend-timeout`            | Set frontend translation timeout                                                                                                                   | `500`                   |
