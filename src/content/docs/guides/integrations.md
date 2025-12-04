@@ -34,4 +34,5 @@ See it in action on this [page](https://community.libretranslate.com/t/have-you-
 
 ## Web browser
 
-- [minbrowser](https://minbrowser.org/) is a web browser with [integrated LibreTranslate support](https://github.com/argosopentech/argos-translate/discussions/158#discussioncomment-1141551).
+- [LibreTranslate for Firefox](https://addons.mozilla.org/en-US/firefox/addon/libretranslate/) a Firefox extension for translating with LibreTranslate
+- [minbrowser](https://minbrowser.org/) is a web browser with [integrated LibreTranslate support](https://github.com/argosopentech/argos-translate/discussions/158#discussioncomment-1141551)
