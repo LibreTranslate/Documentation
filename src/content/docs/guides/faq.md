@@ -15,6 +15,12 @@ By default language models are loaded from the [argos-index](https://github.com/
 
 In `$HOME/.local/share/argos-translate/packages`. On Windows that's `C:\Users\youruser\.local\share\argos-translate\packages`.
 
+## How do I update the language models in a running docker container?
+
+```bash
+docker exec -it libretranslate ./venv/bin/python scripts/install_models.py --update
+```
+
 ## Can I use LibreTranslate behind a reverse proxy, like Apache2 or Caddy?
 
 Yes, here are config examples for Apache2 and Caddy that redirect a subdomain (with HTTPS certificate) to LibreTranslate running on a docker at localhost.
