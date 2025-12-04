@@ -36,6 +36,7 @@ export default defineConfig({
 						{ slug: 'guides/manage_api_keys' },
 						{ slug: 'guides/build_from_sources' },
 						{ slug: 'guides/integrations' },
+						{ slug: 'guides/supported_languages' },
 						{ slug: 'guides/contributing' },
 						{ slug: 'guides/faq' },						
 					]
