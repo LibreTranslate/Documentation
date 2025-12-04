@@ -5,14 +5,14 @@ description: Get up and running with LibreTranslate.
 
 ## With Python
 
-Make sure you have Python 3.8, 3.9 or 3.10 installed, then from a terminal run:
+Make sure you have Python 3.8, 3.9, 3.10, 3.11 or 3.12 installed, then from a terminal run:
 
 ```bash
 pip install libretranslate
 libretranslate [args]
 ```
 
-> ⚠️ Newer version of Python like 3.13 or 3.12 are currently not supported.
+> ⚠️ Newer version of Python like 3.13 are currently not supported.
 
 Then open a web browser to <http://localhost:5000>
 
