@@ -35,4 +35,5 @@ See it in action on this [page](https://community.libretranslate.com/t/have-you-
 ## Web browser
 
 - [LibreTranslate for Firefox](https://addons.mozilla.org/en-US/firefox/addon/libretranslate/) a Firefox extension for translating with LibreTranslate
+- [LibreTranslateClient for Firefox](https://addons.mozilla.org/en-US/firefox/addon/libretranslate/) another Firefox extension for translating with LibreTranslate
 - [minbrowser](https://minbrowser.org/) is a web browser with [integrated LibreTranslate support](https://github.com/argosopentech/argos-translate/discussions/158#discussioncomment-1141551)
