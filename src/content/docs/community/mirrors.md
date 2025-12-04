@@ -8,8 +8,6 @@ This is a list of public LibreTranslate instances. Some require an API key. If y
 | URL                                                                 | API Key Required | Links                                                                                                         |
 | ------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | [libretranslate.com](https://libretranslate.com)                    | ✔️             | [ [Get API Key](https://portal.libretranslate.com) ] [ [Service Status](https://status.libretranslate.com/) ] |
-| [translate.flossboxin.org.in](https://translate.flossboxin.org.in/) |                  | [ [Contact/eMail](mailto:dev@flossboxin.org.in) ]                                                             |
-| [lt.blitzw.in](https://lt.blitzw.in/)                               |                  |                                                                                                               |
 
 ## TOR/i2p Mirrors
 
