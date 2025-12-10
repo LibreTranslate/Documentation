@@ -51,7 +51,7 @@ docker compose -f docker-compose.cuda.yml up -d --build
 
 ```bash
 pip install gunicorn
-gunicorn --bind 0.0.0.0:5000 'wsgi:app'
+gunicorn --bind 0.0.0.0:5000 'wsgi:app()'
 ```
 
 You can pass application arguments directly to Gunicorn via:
