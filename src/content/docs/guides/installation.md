@@ -115,6 +115,7 @@ helm install libretranslate libretranslate/libretranslate --namespace libretrans
 | `--disable-web-ui`              | Disable web UI                                                                                                                                     | `Enabled`               |
 | `--update-models`               | Update language models at startup                                                                                                                  | `Disabled`              |
 | `--metrics`                     | Enable the /metrics endpoint for exporting [Prometheus](https://prometheus.io/) usage metrics                                                      | `Disabled`              |
+| `--translation-cache`           | Cache translation output for users with a particular API key (or 'all' to cache all translations)                                                  | `Disabled`              |
 
 :::tip
 To always require the use of an API key, set `--req-limit` to `0` and add the `--api-keys` flag. Requests made without a proper API key will be rejected.
