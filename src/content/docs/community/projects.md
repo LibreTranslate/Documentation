@@ -8,3 +8,4 @@ In addition to [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate
 * [LTEngine](https://github.com/LibreTranslate/LTEngine): Machine translation powered by LLMs with a LibreTranslate-compatible API
 * [LexiLang](https://github.com/LibreTranslate/LexiLang): Simple, fast dictionary-based language detector for short texts
 * [Locomotive](https://github.com/LibreTranslate/Locomotive): Toolkit for training/converting LibreTranslate compatible language models
+* [MiniSBD](https://github.com/LibreTranslate/MiniSBD): Library for fast sentence boundary detection
