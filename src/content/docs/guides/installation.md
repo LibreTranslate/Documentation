@@ -26,6 +26,12 @@ Check the [arguments](#arguments) list for more options.
 In production it's recommended to run LibreTranslate with Gunicorn or Docker (which is setup with Gunicorn) in order to avoid memory leaks.
 :::
 
+To use the faster sentence boundary detector ([MiniSBD](https://github.com/LibreTranslate/MiniSBD)) use:
+
+```bash
+ARGOS_CHUNK_TYPE=MINISBD libretranslate [...]
+```
+
 ## With Docker
 
 You can also run the application with [docker](https://docker.com). First clone the repository:
@@ -36,6 +42,10 @@ cd LibreTranslate
 ```
 
 Then on Linux/macOS run `./run.sh [args]`, on Windows run `run.bat [args]`.
+
+:::note
+The docker version uses MiniSBD for sentence boundary detection by default. You can override that by modifying run.sh or run.bat and setting a docker `-e ARGOS_CHUNK_TYPE=STANZA` environment variable.
+:::
 
 ### CUDA
 
