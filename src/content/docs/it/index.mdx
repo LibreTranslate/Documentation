@@ -6,15 +6,13 @@ template: doc
 
 import { LinkCard , Card, CardGrid } from '@astrojs/starlight/components';
 
-LibreTranslate è un'API di Traduzione Automatica Libera e Open Source. A differenza di altre API, non si affida a fornitori proprietari come Google o Azure per eseguire le traduzioni. Il suo motore di traduzione è invece basato sulla libreria open source [Argos Translate](https://github.com/argosopentech/argos-translate).
+LibreTranslate è un'API di Traduzione Automatica Libera e Open Source. A differenza di altre API, non si affida a software proprietari come Google o Azure per eseguire le traduzioni. Il suo motore di traduzione è invece basato sulla libreria open source [Argos Translate](https://github.com/argosopentech/argos-translate).
 
 :::tip[Provalo online!]
 Apri [libretranslate.com](https://libretranslate.com) nel tuo browser.
 :::
 
-![Traduzione](https://github.com/user-attachments/assets/457696b5-dbff-40ab-a18e-7bfb152c5121)
-
----
+![Translation](https://github.com/user-attachments/assets/457696b5-dbff-40ab-a18e-7bfb152c5121)
 
 ## Guida Rapida
 
@@ -32,16 +30,15 @@ $ curl -X POST http://localhost:5000/translate -d q="Hello" -d source=en -d targ
 {"translatedText": "Hola"}
 ```
 
-Vedi anche la pagina di installazione.
+Vedi anche la pagina di [installazione](/guides/installation/).
 
 ### Hosting Gestito
 
 Se desideri una configurazione più semplice, alta disponibilità, traduzioni veloci e un servizio gestito professionalmente a un piccolo costo mensile:
-
  * Ottieni una chiave API da: https://portal.libretranslate.com
 
 ```bash
-$ curl -X POST [https://libretranslate.com/translate](https://libretranslate.com/translate) -d q="Hello" -d source=en -d target=es -d api_key=xxxxx
+$ curl -X POST https://libretranslate.com/translate -d q="Hello" -d source=en -d target=es -d api_key=xxxxx
 ```
 
 ```json
@@ -50,20 +47,54 @@ $ curl -X POST [https://libretranslate.com/translate](https://libretranslate.com
 
 In ogni caso, siamo felici che tu sia qui! ❤
 
+----
+
 ## Per Iniziare
 
-<LinkCard title="Riferimento API"
-		href="/reference/example/"
-		description="Sfoglia le specifiche dell'API" />
-Contribuisci
-<LinkCard title="Localizzazione"
-		href="/reference/example/"
-		description="Scopri come tradurre questa documentazione e il software nella tua lingua." />
+<CardGrid>
+	<LinkCard title="Installazione"
+			   href="/guides/installation/"
+			   description="Come installare e avviare rapidamente il software sulla tua macchina." />
+	<LinkCard title="Uso di Base"
+			href="/guides/api_usage/"
+			description="Inizia a tradurre con esempi passo dopo passo." />
+	<LinkCard title="Risorse della Comunità"
+			href="/community/resources/"
+			description="Domande? Scopri dove trovare aiuto." />
 
-<LinkCard title="Addestramento di Nuovi Modelli"
-		href="/reference/example/"
-		description="Scopri come addestrare i tuoi modelli di traduzione." />
+	<LinkCard title="Riferimento API"
+			href="/api/"
+			description="Sfoglia le specifiche dell'API" />
 
-<LinkCard title="Sostieni il Progetto"
-		href="/reference/example/"
-		description="Scopri tutti i modi in cui puoi contribuire." />
+</CardGrid>
+
+## Contribuire
+
+<CardGrid>
+
+	<LinkCard title="Localizzazione"
+			href="/guides/contributing/#documentation"
+			description="Scopri come tradurre questa documentazione e il software nella tua lingua." />
+
+	<LinkCard title="Sostieni il Progetto"
+			href="/guides/contributing/"
+			description="Scopri tutti i modi in cui puoi contribuire." />
+
+	<LinkCard title="Addestramento di Nuovi Modelli"
+			href="https://github.com/LibreTranslate/Locomotive"
+			description="Scopri come addestrare i tuoi modelli di traduzione." />
+
+</CardGrid>
+
+
+## Crediti
+
+Questo lavoro è in gran parte possibile grazie ad [Argos Translate](https://github.com/argosopentech/argos-translate), che alimenta il motore di traduzione.
+
+## Licenza
+
+[Licenza Pubblica Generale Affero GNU v3](https://www.gnu.org/licenses/agpl-3.0.it.html)
+
+## Marchio Registrato
+
+Vedi le [Linee Guida sul Marchio Registrato](https://github.com/LibreTranslate/LibreTranslate/blob/main/TRADEMARK.md)
