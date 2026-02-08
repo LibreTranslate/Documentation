@@ -26,14 +26,16 @@ export default defineConfig({
 					label: "Welcome",
 					translations: {
 						it: "Benvenuti",
-						es: "Bienvenidos"
+						es: "Bienvenidos",
+						fr: "Bienvenue"
 					},
 					items: [
 						{ label: "Quickstart", 
 						  link: "/", 
 						  translations: {
 							it: "Guida rapida",
-							es: "Guía rápida"
+							es: "Guía rápida",
+							fr: "Démarrage rapide"
 						  }
 						},
 					]
@@ -42,6 +44,7 @@ export default defineConfig({
 					label: 'Guides',
 					translations: {
 						it: 'Guide',
+						fr: 'Guides',
 						es: 'Guías'
 					},
 					items: [
@@ -59,6 +62,7 @@ export default defineConfig({
 					label: "Community",
 					translations: {
 						it: "Comunità",
+						fr: "Communauté",
 						es: "Comunidad"
 					},
 					collapsed: true,
@@ -82,7 +86,10 @@ export default defineConfig({
 			  it: {
 				label: 'Italiano',
 			  },
-			  es: {
+			  fr: {
+				label: 'Français',
+			  },
+			  es:{
 				label: 'Español',
 			  },
 			},
