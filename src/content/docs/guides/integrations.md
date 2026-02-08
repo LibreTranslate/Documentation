@@ -29,7 +29,7 @@ See it in action on this [page](https://community.libretranslate.com/t/have-you-
 ## Mobile Apps
 
 - [LibreTranslator](https://codeberg.org/BeoCode/LibreTranslator) is an Android app available [in the F-Droid store](https://f-droid.org/packages/de.beowulf.libretranslater/) that uses the LibreTranslate API.
-- [Translate You](https://github.com/you-apps/TranslateYou) is a privacy focused translator app built with MD3 available [in F-Droid Store](https://f-droid.org/packages/com.bnyro.translate/) and uses the LibreTranslate API amongst other providers.
+- [Translate You](https://github.com/you-apps/TranslateYou) is a privacy focused translator app built with MD3 available [in F-Droid Store](https://f-droid.org/packages/com.bnyro.translate/) and uses the LibreTranslate API.
 - [LiTranslate](https://github.com/viktorkalyniuk/LiTranslate-iOS) is an iOS app [available on the App Store](https://apps.apple.com/us/app/litranslate/id1644385339) that uses the LibreTranslate API.
 
 ## Web browser

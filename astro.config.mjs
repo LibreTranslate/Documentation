@@ -24,12 +24,23 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: "Welcome",
+					translations: {
+						it: "Benvenuti"
+					},
 					items: [
-						{ label: "Quickstart", link: "/" },
+						{ label: "Quickstart", 
+						  link: "/", 
+						  translations: {
+							it: "Guida rapida"
+						  }
+						},
 					]
 				},
 				{
 					label: 'Guides',
+					translations: {
+						it: 'Guide'
+					},
 					items: [
 						{ slug: 'guides/installation' },
 						{ slug: 'guides/api_usage' },
@@ -43,6 +54,9 @@ export default defineConfig({
 				},
 				{
 					label: "Community",
+					translations: {
+						it: "Comunità"
+					},
 					collapsed: true,
 					items: [
 						{ slug: 'community/resources' },
