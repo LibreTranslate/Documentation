@@ -25,13 +25,15 @@ export default defineConfig({
 				{
 					label: "Welcome",
 					translations: {
-						it: "Benvenuti"
+						it: "Benvenuti",
+						es: "Bienvenidos"
 					},
 					items: [
 						{ label: "Quickstart", 
 						  link: "/", 
 						  translations: {
-							it: "Guida rapida"
+							it: "Guida rapida",
+							es: "Guía rápida"
 						  }
 						},
 					]
@@ -39,7 +41,8 @@ export default defineConfig({
 				{
 					label: 'Guides',
 					translations: {
-						it: 'Guide'
+						it: 'Guide',
+						es: 'Guías'
 					},
 					items: [
 						{ slug: 'guides/installation' },
@@ -55,7 +58,8 @@ export default defineConfig({
 				{
 					label: "Community",
 					translations: {
-						it: "Comunità"
+						it: "Comunità",
+						es: "Comunidad"
 					},
 					collapsed: true,
 					items: [
@@ -77,6 +81,9 @@ export default defineConfig({
 			  },
 			  it: {
 				label: 'Italiano',
+			  },
+			  es: {
+				label: 'Español',
 			  },
 			},
 

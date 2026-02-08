@@ -1,13 +1,13 @@
 ---
-title: Utilizzo API
-description: Come tradurre con LibreTranslate.
+title: Uso de la API
+description: Cómo traducir con LibreTranslate.
 ---
 
-Gli esempi seguenti utilizzano Javascript, ma è possibile utilizzare qualsiasi linguaggio di programmazione. Sono disponibili anche [associazioni di linguaggi](#language-bindings) per molti linguaggi di programmazione.
+Los siguientes ejemplos usan Javascript, pero puedes usar cualquier lenguaje de programación. También hay [enlaces de lenguaje](#language-bindings) disponibles para muchos lenguajes de programación.
 
-### Traduzione Semplice
+### Traducción Simple
 
-Richiesta:
+Solicitud:
 
 ```javascript
 const res = await fetch("https://libretranslate.com/translate", {
@@ -16,7 +16,7 @@ const res = await fetch("https://libretranslate.com/translate", {
     q: "Hello!",
     source: "en",
     target: "es",
-    api_key: "xxxxxx" // può essere facoltativo con l'auto-hosting
+    api_key: "xxxxxx" // puede ser opcional si lo alojas tú mismo
   }),
   headers: { "Content-Type": "application/json" },
 });
@@ -24,7 +24,7 @@ const res = await fetch("https://libretranslate.com/translate", {
 console.log(await res.json());
 ```
 
-Risposta:
+Respuesta:
 
 ```javascript
 {
@@ -33,12 +33,12 @@ Risposta:
 ```
 
 :::note
-Il parametro `api_key` è richiesto solo quando si utilizza un'istanza configurata con chiavi API, come [libretranslate.com](https://libretranslate.com). Le istanze auto-ospitate non lo richiedono.
+El parámetro `api_key` solo es necesario cuando se utiliza una instancia configurada con claves API, como [libretranslate.com](https://libretranslate.com). Las instancias que alojas tú mismo no lo requieren.
 :::
 
-### Rilevamento Automatico della Lingua di Origine
+### Detección Automática del Idioma de Origen
 
-Richiesta:
+Solicitud:
 
 ```javascript
 const res = await fetch("https://libretranslate.com/translate", {
@@ -55,7 +55,7 @@ const res = await fetch("https://libretranslate.com/translate", {
 console.log(await res.json());
 ```
 
-Risposta:
+Respuesta:
 
 ```javascript
 {
@@ -67,9 +67,9 @@ Risposta:
 }
 ```
 
-### Tradurre HTML/Markup
+### Traducir HTML/Marcado
 
-Richiesta:
+Solicitud:
 
 ```javascript
 const res = await fetch("https://libretranslate.com/translate", {
@@ -87,7 +87,7 @@ const res = await fetch("https://libretranslate.com/translate", {
 console.log(await res.json());
 ```
 
-Risposta:
+Respuesta:
 
 ```javascript
 {
@@ -95,9 +95,9 @@ Risposta:
 }
 ```
 
-### Traduzioni Alternative
+### Traducciones Alternativas
 
-Richiesta:
+Solicitud:
 
 ```javascript
 const res = await fetch("https://libretranslate.com/translate", {
@@ -116,7 +116,7 @@ const res = await fetch("https://libretranslate.com/translate", {
 console.log(await res.json());
 ```
 
-Risposta:
+Respuesta:
 
 ```javascript
 {
@@ -128,9 +128,9 @@ Risposta:
 }
 ```
 
-### Rilevamento Lingua
+### Detección de Idioma
 
-Richiesta:
+Solicitud:
 
 ```javascript
 const res = await fetch("https://libretranslate.com/detect", {
@@ -144,7 +144,7 @@ const res = await fetch("https://libretranslate.com/detect", {
 console.log(await res.json());
 ```
 
-Risposta:
+Respuesta:
 
 ```javascript
 [{
@@ -154,13 +154,13 @@ Risposta:
 ```
 
 
-### Lingue Supportate
+### Idiomas Soportados
 
 https://libretranslate.com/languages
 
-## Interfacce di Binding
+## Enlaces de Lenguaje
 
-È possibile utilizzare l'API di LibreTranslate utilizzando i seguenti bindings:
+Puedes usar la API de LibreTranslate con los siguientes enlaces:
 
 - Rust: <https://github.com/DefunctLizard/libretranslate-rs>
 - Node.js: <https://github.com/franciscop/translate>

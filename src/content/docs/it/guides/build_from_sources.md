@@ -97,4 +97,15 @@ Alcuni utenti potrebbero riscontrare il seguente errore durante l'installazione 
 
 ```
 error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+
+    …
 ```
+
+Questo si verifica quando il sistema operativo dipende da e gestisce Python per le funzionalità principali. In questo caso, è consigliabile installare e configurare venv (ambienti virtuali) per gestire le dipendenze del progetto.
+
+Ciò impedisce che i pacchetti pip vengano installati a livello di sistema. In questo modo, non ci sono rischi di conflitti tra i pacchetti pip di più progetti o con il sistema operativo.

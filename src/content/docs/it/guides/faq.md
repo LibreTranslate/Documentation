@@ -99,34 +99,141 @@ Aggiungi questo a un Caddyfile esistente o salvalo come `Caddyfile` in qualsiasi
 
 Sostituisci [IL_TUO_DOMINIO] con il tuo dominio completo; ad esempio, `translate.dominio.tld` o `libretranslate.dominio.tld`.
 
-```nginx
-#Libretranslate
-server {
-    listen 80;
-    server_name [IL_TUO_DOMINIO];
+Rimuovi `#` sulle righe `access_log` e `error_log` per disabilitare il logging.
 
-    return 301 https://$host$request_uri;
+```NginxConf
+server {
+  listen 80;
+  server_name [IL_TUO_DOMINIO];
+  return 301 https://$server_name$request_uri;
 }
 
 server {
-    listen 443 ssl;
-    server_name [IL_TUO_DOMINIO];
+  listen 443 http2 ssl;
+  server_name [IL_TUO_DOMINIO];
 
-    ssl_certificate /etc/letsencrypt/live/[IL_TUO_DOMINIO]/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/[IL_TUO_DOMINIO]/privkey.pem;
+  #access_log off;
+  #error_log off;
 
-    location / {
-        proxy_pass http://127.0.0.1:5000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
+  # Sezione SSL
+  ssl_certificate /etc/letsencrypt/live/[IL_TUO_DOMINIO]/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/[IL_TUO_DOMINIO]/privkey.pem;
+
+  ssl_protocols TLSv1.2 TLSv1.3;
+
+  # Utilizzando la suite di cifratura consigliata da: https://wiki.mozilla.org/Security/Server_Side_TLS
+  ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384';
+
+  ssl_session_timeout 10m;
+  ssl_session_cache shared:MozSSL:10m;  # circa 40000 sessioni
+  ssl_session_tickets off;
+
+  # Specifica una curva per le cifrature ECDHE.
+  ssl_ecdh_curve prime256v1;
+  # Il server dovrebbe determinare le cifrature, non il client
+  ssl_prefer_server_ciphers on;
+
+
+  # Sezione header
+  add_header Strict-Transport-Security  "max-age=31536000; includeSubDomains; preload" always;
+  add_header Referrer-Policy            "strict-origin" always;
+
+  add_header X-Frame-Options            "SAMEORIGIN"    always;
+  add_header X-XSS-Protection           "1; mode=block" always;
+  add_header X-Content-Type-Options     "nosniff"       always;
+  add_header X-Download-Options         "noopen"        always;
+  add_header X-Robots-Tag               "none"          always;
+
+  add_header Feature-Policy             "microphone 'none'; camera 'none'; geolocation 'none';"  always;
+  # Header più recente ma non supportato ovunque
+  add_header Permissions-Policy         "microphone=(), camera=(), geolocation=()" always;
+
+  # Rimuovi X-Powered-By, che è una fuga di informazioni
+  fastcgi_hide_header X-Powered-By;
+
+  # Non inviare l'header del server nginx
+  server_tokens off;
+
+  # Sezione GZIP
+  gzip on;
+  gzip_disable "msie6";
+
+  gzip_vary on;
+  gzip_proxied any;
+  gzip_comp_level 6;
+  gzip_buffers 16 8k;
+  gzip_http_version 1.1;
+  gzip_min_length 256;
+  gzip_types text/xml text/javascript font/ttf font/eot font/otf application/x-javascript application/atom+xml application/javascript application/json application/manifest+json application/rss+xml application/x-web-app-manifest+json application/xhtml+xml application/xml image/svg+xml image/x-icon text/css text/plain;
+
+  location / {
+      proxy_pass http://127.0.0.1:5000/;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      client_max_body_size 0;
+  }
 }
+
 ```
 
-Aggiungi questo a una configurazione di un sito esistente o a un nuovo file in `/etc/nginx/sites-available/new-site` ed esegui `sudo ln -s /etc/nginx/sites-available/new-site /etc/nginx/sites-enabled/` per abilitare il sito.
-
-Per ottenere un certificato HTTPS per un sottodominio, installa `certbot` (snap), esegui `sudo certbot certonly --manual --preferred-challenges dns` e inserisci le tue informazioni (con `sottodominio.dominio.tld` come dominio). Aggiungi un record DNS TXT con il tuo registrar di domini quando richiesto. Questo salverà il tuo certificato e la chiave in `/etc/letsencrypt/live/{sottodominio.dominio.tld}/`. In alternativa, commenta le righe SSL se non vuoi usare HTTPS.
+Aggiungi questo a una configurazione NGINX esistente o salvalo come `libretranslate` nella directory `/etc/nginx/site-enabled` ed esegui `sudo nginx -s reload`.
 
 </details>
+
+## Posso eseguirlo come systemd (quello installato con pip/python di default)?
+
+Sì, basta creare un file di servizio in /etc/systemd/system e abilitarlo per l'avvio automatico.
+Il file .env (ambiente) è opzionale in base alla tua configurazione.
+Aggiungi quanto segue al file (modifica i valori secondo necessità) e nomina il file "libretranslate.service")
+
+```javascript
+[Unit]
+Description=LibreTranslate
+After=network.target
+[Service]
+User=root
+Type=idle
+Restart=always
+Environment="PATH=/usr/local/lib/python3.11/dist-packages/libretranslate"
+ExecStart=/usr/bin/python3 /usr/local/bin/libretranslate
+EnvironmentFile=/usr/local/lib/python3.11/dist-packages/libretranslate/.env
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=1
+[Install]
+WantedBy=multi-user.target
+```
+
+Una volta salvato, ricarica il demone e avvia il servizio:
+
+```javascript
+systemctl daemon-reload
+systemctl start libretranslate.service
+systemctl enable libretranslate.service
+```
+
+## Posso fare traduzioni in batch?
+
+Sì, passa un array di stringhe invece di una stringa al campo `q`:
+
+```javascript
+const res = await fetch("https://libretranslate.com/translate", {
+  method: "POST",
+  body: JSON.stringify({
+    q: ["Ciao", "mondo"],
+    source: "en",
+    target: "it",
+  }),
+  headers: { "Content-Type": "application/json" },
+});
+
+console.log(await res.json());
+// {
+//     "translatedText": [
+//         "Ciao",
+//         "mondo"
+//     ]
+// }
+```

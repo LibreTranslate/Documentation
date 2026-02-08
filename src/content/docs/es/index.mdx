@@ -1,0 +1,98 @@
+---
+title: Documentación
+description: Comienza a usar LibreTranslate, la API de traducción gratuita y de código abierto.
+template: doc
+---
+
+import { LinkCard , Card, CardGrid } from '@astrojs/starlight/components';
+
+LibreTranslate es una API de traducción automática gratuita y de código abierto. A diferencia de otras API, no depende de software propietario como Google o Azure para realizar traducciones. En su lugar, su motor de traducción está impulsado por la biblioteca de código abierto [Argos Translate](https://github.com/argosopentech/argos-translate).
+
+:::tip[¡Pruébalo en línea!]
+Abre [libretranslate.com](https://libretranslate.com) en tu navegador.
+:::
+
+## Guía rápida
+
+### Auto-alojado
+
+Si quieres ejecutar LibreTranslate gratis en tu máquina:
+
+```bash
+$ pip install libretranslate
+$ libretranslate
+$ curl -X POST http://localhost:5000/translate -d q="Hello" -d source=en -d target=es
+```
+
+```json
+{"translatedText":"Hola"}
+```
+
+Consulta también la página de [instalación](/guides/installation/).
+
+### Alojamiento gestionado
+
+Si deseas una configuración más sencilla, alta disponibilidad, traducciones rápidas y un servicio gestionado profesionalmente por un pequeño costo mensual:
+ * Obtén una clave API de: https://portal.libretranslate.com
+
+```bash
+$ curl -X POST https://libretranslate.com/translate -d q="Hello" -d source=en -d target=es -d api_key=xxxxx
+```
+
+```json
+{"translatedText":"Hola"}
+```
+
+¡De cualquier manera, nos alegra que estés aquí! ❤
+
+----
+
+## Empezando
+
+<CardGrid>
+	<LinkCard title="Instalación" 
+			   href="/guides/installation/"
+			   description="Cómo poner en marcha rápidamente el software en tu máquina." />
+	<LinkCard title="Uso Básico" 
+			href="/guides/api_usage/"
+			description="Comienza a traducir con ejemplos paso a paso." />
+	<LinkCard title="Recursos de la Comunidad" 
+			href="/community/resources/"
+			description="¿Preguntas? Descubre dónde obtener ayuda." />
+
+	<LinkCard title="Referencia de la API" 
+			href="/api/"
+			description="Explora la especificación de la API" />
+
+</CardGrid>
+
+## Contribuyendo
+
+<CardGrid>
+
+	<LinkCard title="Localización" 
+			href="/guides/contributing/#documentation"
+			description="Aprende a traducir estos documentos y el software a tu idioma." />
+	
+	<LinkCard title="Apoya el Proyecto" 
+			href="/guides/contributing/"
+			description="Descubre todas las formas en que puedes contribuir." />
+
+	<LinkCard title="Entrenamiento de Nuevos Modelos de Lenguaje" 
+			href="https://github.com/LibreTranslate/Locomotive"
+			description="Aprende a entrenar tus propios modelos de traducción." />
+
+</CardGrid>
+
+
+## Créditos
+
+Este trabajo es posible en gran parte gracias a [Argos Translate](https://github.com/argosopentech/argos-translate), que impulsa el motor de traducción.
+
+## Licencia
+
+[Licencia Pública General Affero de GNU v3](https://www.gnu.org/licenses/agpl-3.0.en.html)
+
+## Marca Registrada
+
+Ver [Directrices de Marca Registrada](https://github.com/LibreTranslate/LibreTranslate/blob/main/TRADEMARK.md)

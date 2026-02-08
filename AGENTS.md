@@ -11,6 +11,9 @@ This is the documentation repository of LibreTranslate, a free and open source t
 - Always preserve images in the proper places.
 - Each translation for other languages, like Italian or Spanish, needs to be added as subfolder in `src/content/docs/[langcode]`, where `langcode` is the 2 letter ISO 639 language code. For example, Italian docs go in `src/content/docs/it/`.
 - Each translation must have an `index.mdx` and copies of each subfolder (`community`, `guides`) and a copy of each markdown file in each subfolder. Always verify that the number of pages match.
+- Always create/update ALL the markdown files when asked to add or update a translation.
+- Always translate from English, never from another language.
+- Always verify all translations for accuracy and completeness in all markdown files, then fix all inaccuracies and fill any missing section, if any.
 - When translating internal links, we always reference them with the appropriate URL that maps to a markdown file of the translation.
 - Never modify any other file other than those in `src/content` or `astro.config.mjs` without explicit permission.
 - When translating, always check that all the sidebar items in `astro.config.mjs` have a proper translation item in the `translations` key.
