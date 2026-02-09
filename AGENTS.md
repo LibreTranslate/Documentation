@@ -26,3 +26,13 @@ npm run build
 ```
 
 The outputs will be in `dist/`.
+
+# Glossaries / Nuances
+
+These words / sentences should be treated carefully:
+
+## Machine
+
+Should be interpreted as "computer" or "system" (not a literal machine).
+
+E.g. in Spanish use "equipo" or "computadora", not "máquina".

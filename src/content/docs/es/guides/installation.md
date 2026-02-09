@@ -49,7 +49,7 @@ La versión de docker utiliza MiniSBD para la detección de límites de oración
 
 ### CUDA
 
-Es posible usar la aceleración de hardware para acelerar las traducciones en una máquina GPU con CUDA 12.4.1 y [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) instalado.
+Es posible usar la aceleración de hardware para acelerar las traducciones en un equipo con GPU compatible con CUDA 12.4.1 y [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) instalado.
 
 Ejecuta esta versión con:
 
