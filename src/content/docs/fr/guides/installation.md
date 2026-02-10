@@ -43,13 +43,9 @@ cd LibreTranslate
 
 Ensuite sur Linux/macOS exécutez `./run.sh [args]`, sur Windows exécutez `run.bat [args]`.
 
-:::note
-La version docker utilise MiniSBD pour la détection des limites de phrases par défaut. Vous pouvez outrepasser cela en modifiant run.sh ou run.bat et en définissant une variable d'environnement docker `-e ARGOS_CHUNK_TYPE=STANZA`.
-:::
-
 ### CUDA
 
-Vous pouvez utiliser l'accélération matérielle pour accélérer les traductions sur une machine GPU avec CUDA 12.4.1 et [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installés.
+Vous pouvez utiliser l'accélération matérielle pour accélérer les traductions sur un système équipé d'un GPU avec CUDA 12.4.1 et [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installés.
 
 Exécutez cette version avec :
 

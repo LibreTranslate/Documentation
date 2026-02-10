@@ -43,13 +43,9 @@ cd LibreTranslate
 
 Quindi su Linux/macOS esegui `./run.sh [args]`, su Windows esegui `run.bat [args]`.
 
-:::note
-La versione docker utilizza MiniSBD per il rilevamento dei confini di frase per impostazione predefinita. Puoi sovrascriverlo modificando run.sh o run.bat e impostando una variabile d'ambiente docker `-e ARGOS_CHUNK_TYPE=STANZA`.
-:::
-
 ### CUDA
 
-È possibile utilizzare l'accelerazione hardware per velocizzare le traduzioni su una macchina GPU con CUDA 12.4.1 e [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installato.
+È possibile utilizzare l'accelerazione hardware per velocizzare le traduzioni su un sistema dotato di GPU con CUDA 12.4.1 e [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installato.
 
 Esegui questa versione con:
 

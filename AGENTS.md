@@ -7,6 +7,7 @@ This is the documentation repository of LibreTranslate, a free and open source t
 # Rules
 
 - The tone of translation should be technical. The context of translation is that of software API.
+- When updating translations, always look at the current git diff to see which sections were changed. If there are no active changes in the current branch, compare against the latest commit (git diff HEAD~1 HEAD)
 - Never edit or commit any file in `src/content/docs/community` or `src/content/docs/guides` or `src/content/index.mdx`. These are the original English pages
 - Always preserve images in the proper places.
 - Each translation for other languages, like Italian or Spanish, needs to be added as subfolder in `src/content/docs/[langcode]`, where `langcode` is the 2 letter ISO 639 language code. For example, Italian docs go in `src/content/docs/it/`.

@@ -43,10 +43,6 @@ cd LibreTranslate
 
 Then on Linux/macOS run `./run.sh [args]`, on Windows run `run.bat [args]`.
 
-:::note
-The docker version uses MiniSBD for sentence boundary detection by default. You can override that by modifying run.sh or run.bat and setting a docker `-e ARGOS_CHUNK_TYPE=STANZA` environment variable.
-:::
-
 ### CUDA
 
 You can use hardware acceleration to speed up translations on a GPU machine with CUDA 12.4.1 and [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) installed.
