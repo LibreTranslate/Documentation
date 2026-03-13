@@ -173,6 +173,6 @@ Vous pouvez utiliser l'API LibreTranslate en utilisant les bindings suivants :
 - Swift : <https://github.com/wacumov/libretranslate>
 - Unix : <https://github.com/argosopentech/LibreTranslate-sh>
 - Shell : <https://github.com/Hayao0819/Hayao-Tools/tree/master/libretranslate-sh>
-- Java : <https://github.com/suuft/libretranslate-java>
+- Java : <https://github.com/stokito/libretranslate-java>
 - Ruby : <https://github.com/noesya/libretranslate>
 - R : <https://github.com/myanesp/libretranslateR>
