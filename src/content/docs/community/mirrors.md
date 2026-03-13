@@ -9,6 +9,7 @@ This is a list of public LibreTranslate instances. Some require an API key. If y
 | ------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | [libretranslate.com](https://libretranslate.com)                    | ✔️             | [ [Get API Key](https://portal.libretranslate.com) ] [ [Service Status](https://status.libretranslate.com/) ] |
 | [translate.cutie.dating](https://translate.cutie.dating)            | ❌               | [ [Service Status](https://status.cutie.dating/status) ] |
+| [translate.fedilab.app](https://translate.fedilab.app/)             | ❌               | |
 
 ## TOR/i2p Mirrors
 
