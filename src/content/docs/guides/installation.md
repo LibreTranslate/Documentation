@@ -99,6 +99,7 @@ helm install libretranslate libretranslate/libretranslate --namespace libretrans
 | `--batch-limit`                 | Set maximum number of texts to translate in a batch request                                                                                        | `No limit`              |
 | `--frontend-language-source`    | Set frontend default language - source                                                                                                             | `auto`                  |
 | `--frontend-language-target`    | Set frontend default language - target                                                                                                             | `locale`                |
+| `--frontend-title`              | Set frontend title                                                                                                                                 | `No title`              |
 | `--frontend-timeout`            | Set frontend translation timeout                                                                                                                   | `500`                   |
 | `--api-keys-db-path`            | Use a specific path inside the container for the local database. Can be absolute or relative                                                       | `db/api_keys.db`        |
 | `--api-keys-remote`             | Use this remote endpoint to query for valid API keys instead of using the local database                                                           | `Use local db`          |

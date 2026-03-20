@@ -99,6 +99,7 @@ helm install libretranslate libretranslate/libretranslate --namespace libretrans
 | `--batch-limit` | Définir le nombre maximum de textes à traduire dans une requête groupée | `No limit` |
 | `--frontend-language-source` | Définir la langue par défaut du frontend - source | `auto` |
 | `--frontend-language-target` | Définir la langue par défaut du frontend - cible | `locale` |
+| `--frontend-title` | Définir le titre du frontend | `Pas de titre` |
 | `--frontend-timeout` | Définir le délai d'expiration de la traduction du frontend | `500` |
 | `--api-keys-db-path` | Utiliser un chemin spécifique à l'intérieur du conteneur pour la base de données locale. Peut être absolu ou relatif | `db/api_keys.db` |
 | `--api-keys-remote` | Utiliser ce endpoint distant pour interroger les clés API valides au lieu d'utiliser la base de données locale | `Use local db` |
