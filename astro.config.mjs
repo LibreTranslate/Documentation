@@ -53,6 +53,15 @@ export default defineConfig({
 						{ slug: 'guides/manage_api_keys' },
 						{ slug: 'guides/build_from_sources' },
 						{ slug: 'guides/integrations' },
+						{ 
+							label: 'MCP Server', 
+							slug: 'guides/mcp_server',
+							translations: {
+								it: 'Server MCP',
+								es: 'Servidor MCP',
+								fr: 'Serveur MCP'
+							}
+						},
 						{ slug: 'guides/supported_languages' },
 						{ slug: 'guides/contributing' },
 						{ slug: 'guides/faq' },						
