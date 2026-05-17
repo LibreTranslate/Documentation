@@ -15,6 +15,7 @@ Add this to your client's configuration:
 {
   "mcp": {
     "LibreTranslate": {
+      "type": "local",
       "command": ["npx", "-y", "@libretranslate/mcp"],
       "environment": {
         "LIBRETRANSLATE_API_URL": "https://libretranslate.com",
