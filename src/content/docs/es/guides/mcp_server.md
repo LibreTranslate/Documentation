@@ -3,7 +3,7 @@ title: Servidor MCP
 description: Cómo hacer que LibreTranslate esté disponible para agentes de IA.
 ---
 
-LibreTranslate puede dar capacidades de traducción automática a agentes de IA que soporten el protocolo [MCP](https://modelcontextprotocol.io/docs/getting-ting-started/intro).
+LibreTranslate puede dar capacidades de traducción automática a agentes de IA que soporten el protocolo [MCP](https://modelcontextprotocol.io/docs/getting-started/intro).
 
 ## Configuración
 
