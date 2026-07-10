@@ -86,6 +86,14 @@ helm search repo libretranslate
 helm install libretranslate libretranslate/libretranslate --namespace libretranslate --create-namespace
 ```
 
+## Managed Hosting
+
+If you would rather not run your own server, you can deploy a managed LibreTranslate instance with one click on [Zenith](https://zenith.hosting/host/libretranslate):
+
+[![Deploy with Zenith](https://cdn.zenith.hosting/buttons/deploy-with-zenith.svg)](https://zenith.hosting/host/libretranslate)
+
+Storage, backups, TLS and a free subdomain are included, and a share of every subscription goes back to LibreTranslate.
+
 ## Arguments
 
 | Argument                        | Description                                                                                                                                        | Default                 |
