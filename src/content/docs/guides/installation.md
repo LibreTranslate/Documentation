@@ -86,6 +86,12 @@ helm search repo libretranslate
 helm install libretranslate libretranslate/libretranslate --namespace libretranslate --create-namespace
 ```
 
+## With Easypanel
+
+[Easypanel](https://easypanel.io) is a self-hosted Docker deployment platform, and LibreTranslate has a one-click deployment template there:
+
+[![Deploy on Easypanel](https://easypanel.io/img/deploy-on-easypanel-40.svg)](https://easypanel.io/templates/libretranslate)
+
 ## Arguments
 
 | Argument                        | Description                                                                                                                                        | Default                 |
