@@ -9,3 +9,4 @@ En plus de [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate), n
 * [LexiLang](https://github.com/LibreTranslate/LexiLang) : Détecteur de langue simple et rapide basé sur un dictionnaire pour les textes courts
 * [Locomotive](https://github.com/LibreTranslate/Locomotive) : Boîte à outils pour entraîner/convertir des modèles de langue compatibles LibreTranslate
 * [MiniSBD](https://github.com/LibreTranslate/MiniSBD) : Librairie pour la détection rapide des limites de phrases
+* [PoLibre](https://github.com/LibreTranslate/PoLibre) : Éditeur de fichiers .po avec traduction assistée par ordinateur via LibreTranslate et des LLM
