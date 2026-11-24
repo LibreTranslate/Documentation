@@ -128,6 +128,42 @@ Respuesta:
 }
 ```
 
+### Glosario
+
+Puedes usar un glosario para elegir cómo se traducen términos específicos.
+
+Solicitud:
+
+```javascript
+const res = await fetch("https://libretranslate.com/translate", {
+  method: "POST",
+  body: JSON.stringify({
+    q: "Hey, do you want a Coke?",
+    source: "en",
+    target: "it",
+    glossary: { "coke": "coca-cola" },
+    api_key: "xxxxxx"
+  }),
+  headers: { "Content-Type": "application/json" },
+});
+
+console.log(await res.json());
+```
+
+Respuesta:
+
+```javascript
+{
+    "translatedText": "Ehi, vuoi una coca-cola?"
+}
+```
+
+Un glosario puede tener hasta 200 entradas, con un máximo de 200 caracteres por palabra o expresión. No se distingue entre mayúsculas y minúsculas. Incluye los plurales por separado:
+
+```javascript
+{ "coke": "coca-cola", "cokes": "coca-cole" }
+```
+
 ### Detección de Idioma
 
 Solicitud:

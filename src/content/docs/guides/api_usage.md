@@ -128,6 +128,42 @@ Response:
 }
 ```
 
+### Glossary
+
+You can use a glossary to choose how specific terms get translated.
+
+Request:
+
+```javascript
+const res = await fetch("https://libretranslate.com/translate", {
+  method: "POST",
+  body: JSON.stringify({
+    q: "Hey, do you want a Coke?",
+    source: "en",
+    target: "it",
+    glossary: { "coke": "coca-cola" },
+    api_key: "xxxxxx"
+  }),
+  headers: { "Content-Type": "application/json" },
+});
+
+console.log(await res.json());
+```
+
+Response:
+
+```javascript
+{
+    "translatedText": "Ehi, vuoi una coca-cola?"
+}
+```
+
+A glossary can have up to 200 entries, with up to 200 characters per word or phrase. Case is ignored. List plurals separately:
+
+```javascript
+{ "coke": "coca-cola", "cokes": "coca-cole" }
+```
+
 ### Language Detection
 
 Request:
